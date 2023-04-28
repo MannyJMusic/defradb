@@ -1,0 +1,71 @@
+type AuthModel {
+    api_token: String
+    refreshToken: String
+}
+
+type UserAddressModel {
+    addressLine: String
+    city: String
+    state: String
+    postCode: String
+}
+
+type UserCommunicationModel {
+    email: Boolean
+    sms: Boolean
+    phone: Boolean
+}
+
+type UserEmailSettingsModel {
+    emailNotification: Boolean
+    sendCopyToPersonalEmail: Boolean
+    activityRelatesEmail: ActivityRelatesEmailModel
+    updatesFromKeenthemes: UpdatesFromKeenthemesModel
+}
+
+type ActivityRelatesEmailModel {
+    youHaveNewNotifications: Boolean
+    youAreSentADirectMessage: Boolean
+    someoneAddsYouAsAsAConnection: Boolean
+    uponNewOrder: Boolean
+    newMembershipApproval: Boolean
+    memberRegistration: Boolean
+}
+
+type UpdatesFromKeenthemesModel {
+    newsAboutKeenthemesProductsAndFeatureUpdates: Boolean
+    tipsOnGettingMoreOutOfKeen: Boolean
+    thingsYouMissedSindeYouLastLoggedIntoKeen: Boolean
+    newsAboutStartOnPartnerProductsAndOtherServices: Boolean
+    tipsOnStartBusinessProducts: Boolean
+}
+
+type UserSocialNetworksModel {
+    linkedIn: String
+    facebook: String
+    twitter: String
+    instagram: String
+}
+
+type UserModel {
+    id: Int
+    username: String
+    password: String
+    email: String
+    first_name: String
+    last_name: String
+    fullname: String
+    occupation: String
+    companyName: String
+    phone: String
+    roles: [Int]
+    pic: String
+    language: String
+    timeZone: String
+    website: String
+    emailSettings: UserEmailSettingsModel
+    auth: AuthModel
+    communication: UserCommunicationModel
+    address: UserAddressModel
+    socialNetworks: UserSocialNetworksModel
+}

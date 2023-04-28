@@ -1,0 +1,42 @@
+type Track {
+    id: ID
+    title: String
+    artist: String
+    label: String
+    minimumFee: Float
+    useCases: [String]
+    media: [String]
+    territory: String
+    term: String
+    composition: [TrackCredit]
+    master: [TrackCredit]
+    recordContributors: RecordContributors
+    performanceContributors: PerformanceContributors
+}
+
+type TrackCredit {
+    name: String
+    role: String
+    primaryPercentage: Float
+}
+
+type RecordContributors {
+    producers: [String]
+    recordingStudio: String
+    mixer: String
+    masteringEngineer: String
+    masteringStudio: String
+    masteringAssistant: String
+    dateOfMastering: String
+}
+
+type PerformanceContributors {
+    leadVocals: String
+    backgroundVocals: [String]
+    drums: String
+    drumProgramming: String
+    bass: String
+    guitar: String
+    keysSynths: String
+}
+
