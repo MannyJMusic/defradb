@@ -1,13 +1,17 @@
-type AuthModel {
-    api_token: String
-    refreshToken: String
+type LoginParams {
+    email: String
+    password: String
+    rememberMe: Boolean
 }
 
-type UserAddressModel {
-    addressLine: String
-    city: String
-    state: String
-    postCode: String
+type UserDataType {
+    id: Int
+    role: String
+    email: String
+    fullName: String
+    username: String
+    password: String
+    avatar: String
 }
 
 type UserCommunicationModel {
@@ -47,25 +51,4 @@ type UserSocialNetworksModel {
     instagram: String
 }
 
-type UserModel {
-    id: Int
-    username: String
-    password: String
-    email: String
-    first_name: String
-    last_name: String
-    fullname: String
-    occupation: String
-    companyName: String
-    phone: String
-    roles: [Int]
-    pic: String
-    language: String
-    timeZone: String
-    website: String
-    emailSettings: UserEmailSettingsModel
-    auth: AuthModel
-    communication: UserCommunicationModel
-    address: UserAddressModel
-    socialNetworks: UserSocialNetworksModel
-}
+
